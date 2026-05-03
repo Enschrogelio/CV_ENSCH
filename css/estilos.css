@@ -1,0 +1,115 @@
+ body {
+   font-family: 'Segoe UI', sans-serif;
+   margin: 0;
+ }
+
+ /* 🔥 PARTICLES BACKGROUND */
+ #particles-js {
+   position: fixed;
+   width: 100%;
+   height: 100%;
+   background: #000;
+   z-index: 0;
+   top: 0;
+   left: 0;
+ }
+
+ /* CONTENIDO ENCIMA */
+ .container-fluid {
+   position: relative;
+   z-index: 1;
+ }
+
+ /* SIDEBAR */
+ .sidebar {
+   background: transparent;
+   padding: 20px;
+ }
+
+ .sidebar * {
+   color: #fff !important;
+ }
+
+ /* CARDS */
+ .section-box {
+   background: #fff;
+   padding: 20px;
+   margin-bottom: 20px;
+   border-radius: 10px;
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+ }
+
+ .title {
+   font-weight: bold;
+   text-transform: uppercase;
+   margin-bottom: 10px;
+ }
+
+ /* LOGOS */
+ .company-logo {
+   width: 40px;
+   height: 40px;
+   object-fit: contain;
+   border-radius: 6px;
+ }
+
+ .section-box ul {
+   margin-bottom: 20px;
+ }
+
+ .section-box .d-flex {
+   gap: 10px;
+ }
+
+ .hover-underline {
+   font-size: 2rem;
+   color: #ffffff;
+   position: relative;
+   display: inline-block;
+ }
+
+ .hover-underline::after,
+ .hover-underline::before {
+   content: '';
+   position: absolute;
+   width: 100%;
+   height: 2px;
+   background: linear-gradient(to right, #ff0000, #00ffff);
+   bottom: -5px;
+   left: 0;
+   transform: scaleX(0);
+   transform-origin: right;
+   transition: transform 0.4s ease-out;
+ }
+
+ .hover-underline::before {
+   top: -5px;
+   transform-origin: left;
+ }
+
+ .hover-underline:hover::after,
+ .hover-underline:hover::before {
+   transform: scaleX(1);
+ }
+
+
+
+ /* MOBILE */
+ @media (max-width: 768px) {
+   .sidebar {
+     text-align: center;
+   }
+
+   .company-logo {
+     width: 32px;
+     height: 32px;
+   }
+
+   .section-box {
+     padding: 15px;
+   }
+
+   .section-box ul {
+     padding-left: 18px;
+   }
+ }
